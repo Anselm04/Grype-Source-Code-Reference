@@ -10,13 +10,26 @@
 - Original tracked tree inventory: 2,278 entries, including 1,596 file blobs (7,883,759 bytes).
 - Root upstream licence: Apache License 2.0. Preserve `LICENSE`, `COPYRIGHT` and all applicable original notices.
 - Source destination: actual original project files **directly on `main`**.
-- Verification: **PENDING** until remote Git import and independent source-object comparison have succeeded.
+- Verification: **PASSED — actual source on `main`, imported and independently checked against pinned upstream Git objects.**
 
 ## Why this exists
 
 Grype's publicly available code is useful for studying software-component vulnerability detection, matching installed package versions against advisories, scanning SBOMs (including Syft output), representing findings with provenance, handling database availability and freshness, and building deterministic security decision gates.
 
 This public research repository is NOT a grant to ignore upstream licence obligations. TrillionAI Audit must use independently engineered Node.js/TypeScript orchestration and Flutter UIs, with licensing reviewed before copying individual upstream files. Never put private TrillionAI code into this public source archive.
+
+## Verified source import
+
+- [Successful GitHub Actions import](https://github.com/Anselm04/Grype-Source-Code-Reference/actions/runs/43649613396)
+- Pinned original source commit: `6b58d49475713089136ce884a103a867c487bca9`
+- Original upstream Git tree: `2c2d2370071bdf9eb857e1aabb9e23adfcc3d6c7`
+- Verified destination `main` Git tree: `93a561093dba7980c09a245b28d4aa344eff4cad`
+- Original tracked files: **1,596 blobs**, across **2,278 Git entries** including directories.
+- Independent source SHA/mode mismatches: **zero**, excluding only original GitHub Actions workflow removal and the added research document.
+- Original `LICENSE` and `COPYRIGHT` confirmed present and readable.
+- Real source root directories visible on `main`: `grype/`, `cmd/`, `internal/`, `schema/`, `test/`.
+
+This confirms Git source archive integrity. It does not certify a working Grype binary, current vulnerability database or passing runtime tests.
 
 ## Safe source-import contract
 
